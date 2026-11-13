@@ -1,0 +1,4 @@
+patch="$1"
+shift
+git apply -- "$patch"
+node .forge/verify-unit.mjs candidate web "$@"
